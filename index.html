@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترحيب - The Cause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* إعدادات الجسم والخلفية */
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column; /* لتوزيع المحتويات بشكل عمودي */
+            background-color: transparent;
+        }
+
+        /* إعدادات الفيديو */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* وضع الفيديو في الخلفية */
+        }
+
+        /* إعدادات الشاشة السوداء */
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeOut 2s forwards 2s;
+        }
+
+        /* إعدادات النص */
+        .welcome-text {
+            color: #97b8b8;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            z-index: 2;
+            animation: textAnimation 2s ease-in-out forwards;
+        }
+
+        /* تأثير الزخرفة */
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* الرسوم المتحركة للاختفاء */
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* شريط التنقل العلوي */
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            z-index: 2;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #3498db;
+        }
+
+        /* شريط Contact */
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            z-index: 3;
+        }
+
+        /* تنسيق الأيقونات */
+        .contact-bar a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .contact-bar a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <div class="navbar">
+        <a href="https://tayseer2005.github.io/cc/">DRINK</a>
+        <a href="https://tayseer2005.github.io/ff/">SANDWICH</a>
+        <a href="#sweet">SWEET</a>
+    </div>
+
+    <!-- إضافة الفيديو كخلفية -->
+    <video muted loop id="background-video">
+        <source src="https://h.top4top.io/m_32373wfmf1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- الشاشة السوداء والنص -->
+    <div class="black-screen">
+        <div class="welcome-text">
+            Welcome to <strong>The CAUSE</strong>
+        </div>
+    </div>
+
+    <!-- شريط Contact مع أيقونة إنستغرام -->
+    <div class="contact-bar">
+        <span>Contact us:</span>
+        <a href="https://www.instagram.com/thecause.jo?igsh=YzU1dzE1dDVnYXMz" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- سكربت لتشغيل الفيديو بعد اختفاء الشاشة السوداء -->
+    <script>
+        // إيقاف الفيديو مؤقتًا عند تحميل الصفحة
+        const video = document.getElementById('background-video');
+        video.pause();
+
+        // تشغيل الفيديو بعد اختفاء الشاشة السوداء
+        setTimeout(() => {
+            video.play();
+        }, 4000); // بعد 4 ثوانٍ
+    </script>
+</body>
+</html>
