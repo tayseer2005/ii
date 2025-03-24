@@ -6,7 +6,6 @@
     <title>ترحيب - The Cause</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* إعدادات عامة */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +13,7 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        /* إعدادات الجسم والخلفية */
+        
         body, html {
             height: 100%;
             overflow: hidden;
@@ -23,7 +22,7 @@
             background-color: transparent;
         }
 
-        /* إعدادات الفيديو */
+     
         #background-video {
             position: fixed;
             top: 0;
@@ -34,7 +33,7 @@
             z-index: -1;
         }
 
-        /* إعدادات الشاشة السوداء */
+       
         .black-screen {
             position: fixed;
             top: 0;
@@ -47,10 +46,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: fadeOut 3s forwards 1s;
+            animation: fadeOut 6s forwards 1s;
         }
 
-        /* إعدادات النص */
+       
         .welcome-text {
             color: #97b8b8;
             font-size: 3em;
@@ -58,23 +57,23 @@
             padding: 20px;
             z-index: 2;
             text-align: center;
-            animation: textAnimation 2s ease-in-out forwards;
+            animation: textAnimation 5s ease-in-out forwards;
         }
 
-        /* تأثير الزخرفة */
+     
         @keyframes textAnimation {
             0% { opacity: 0; transform: scale(0.5); }
             50% { opacity: 1; transform: scale(1.1); }
             100% { opacity: 1; transform: scale(1); }
         }
 
-        /* الرسوم المتحركة للاختفاء */
+       
         @keyframes fadeOut {
             0% { opacity: 1; }
             100% { opacity: 0; }
         }
 
-        /* شريط التنقل العلوي */
+      
         .navbar {
             width: 100%;
             background-color: rgba(51, 51, 51, 0.8);
@@ -89,7 +88,7 @@
             top: 0;
             left: 0;
             opacity: 0;
-            animation: navbarAnimation 2s forwards 2s;
+            animation: navbarAnimation 4s forwards 2s;
         }
 
         @keyframes navbarAnimation {
@@ -102,7 +101,7 @@
             text-decoration: none;
             font-size: 2.2em;
             text-transform: uppercase;
-            transition: color 0.3s;
+            transition: color 6s;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s forwards;
@@ -120,13 +119,13 @@
         .navbar a:nth-child(4) { animation-delay: 0.8s; }
 
         .navbar img {
-            margin-top: -20px;
+            
             width: 120px;
             height: 120px;
             border-radius: 100%;
             opacity: 70;
             transform: translateY(20px);
-            animation: fadeInUp 1s forwards 1s;
+            animation: fadeInUp 2s forwards 2s;
         }
 
         @keyframes fadeInUp {
@@ -154,7 +153,7 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 2em;
-            transition: color 0.3s;
+            transition: color 5s;
         }
 
         .contact-bar a:hover {
@@ -187,28 +186,32 @@
 </head>
 <body>
     <div class="navbar">
-        <a style="color: black;font-size: 2.2em;" href="#">The CAUSE</a>
-        <img src="https://d.top4top.io/p_3238f7hz11.jpeg" alt="The Cause Logo">
-        <a href="https://tayseer2005.github.io/ii/">HOME</a>
-        <a href="https://tayseer2005.github.io/cc/">DRINKS</a>
-        <a href="#sweet">SWEET</a>
-        <a href="https://tayseer2005.github.io/ff/">SANDWICH</a>
+
+        <img src="https://h.top4top.io/p_3370oc2oi1.jpg" alt="Play Time Logo">
+        <div style="background-color: rgb(63, 156, 58);">
+        <a href="https://tally.so/r/3E6KY2">ملاعب القوات المسلحة طبربور  8.30-10</a>
+      </div>
+        <a href="#"</a>
+          <div style="background-color: rgb(63, 156, 58);">
+        <a href="#">ملاعب اكسفورد قريب من الاحوال المدنية طبربور 8-10</a>
+      </div>
+
     </div>
 
     <video muted loop id="background-video" playsinline poster="https://example.com/fallback.jpg">
-        <source src="https://h.top4top.io/m_32373wfmf1.mp4" type="video/mp4">
+        <source src="https://e.top4top.io/m_3370437k81.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <div class="black-screen">
         <div class="welcome-text">
-            Welcome to <strong>The CAUSE</strong>
+            Welcome to <strong>Play Time Football</strong>
         </div>
     </div>
 
     <div class="contact-bar">
         <span>Contact us:</span>
-        <a href="https://www.instagram.com/thecause.jo?igsh=YzU1dzE1dDVnYXMz" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/play.time2025?igsh=MWFwYTM4Zmc2NGx5eg==" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
     </div>
